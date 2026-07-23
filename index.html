@@ -38,6 +38,8 @@
                     <a href="#" class="hover:text-brand-500 transition">Beranda</a>
                     <a href="#kategori" class="hover:text-brand-500 transition">Topik</a>
                     <a href="#artikel" class="hover:text-brand-500 transition">Artikel</a>
+                    <a href="#tentang" class="hover:text-brand-500 transition">Tentang</a>
+                    <a href="#kontak" class="hover:text-brand-500 transition">Kontak</a>
                 </nav>
 
                 <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500 transition shadow-sm flex items-center justify-center cursor-pointer">
@@ -98,35 +100,63 @@
         <section id="artikel" class="py-12 border-t border-gray-200 dark:border-zinc-800">
             <div class="flex items-center justify-between mb-8">
                 <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold">Artikel Terbaru</h2>
-                <a href="#" class="text-xs font-semibold text-brand-500 hover:underline">Lihat Semua &rarr;</a>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Kartu Artikel 1 -->
+                <!-- Artikel 1 -->
                 <article class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500/50 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between text-xs text-gray-400 dark:text-zinc-500 mb-3">
                             <span>23 Juli 2026</span>
                             <span class="px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-500 font-medium">Web Dev</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer">Membuat Tampilan Minimalis dengan Tailwind CSS dan Dark Mode</h3>
+                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer" onclick="bukaArtikel('modal-1')">Membuat Tampilan Minimalis dengan Tailwind CSS dan Dark Mode</h3>
                         <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Eksplorasi mendalam cara merancang antarmuka web yang bersih tanpa ribet menggunakan utility-first framework.</p>
                     </div>
-                    <a href="#" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition">Baca Artikel &rarr;</a>
+                    <button onclick="bukaArtikel('modal-1')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
                 </article>
 
-                <!-- Kartu Artikel 2 -->
+                <!-- Artikel 2 -->
                 <article class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500/50 transition flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between text-xs text-gray-400 dark:text-zinc-500 mb-3">
                             <span>20 Juli 2026</span>
                             <span class="px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-500 font-medium">Trading</span>
                         </div>
-                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer">Strategi Membaca Tren Pergerakan XAU/USD di Sesi London</h3>
+                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer" onclick="bukaArtikel('modal-2')">Strategi Membaca Tren Pergerakan XAU/USD di Sesi London</h3>
                         <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Catatan evaluasi dan manajemen risiko harian dalam menghadapi volatilitas tinggi pada market emas.</p>
                     </div>
-                    <a href="#" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition">Baca Artikel &rarr;</a>
+                    <button onclick="bukaArtikel('modal-2')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
                 </article>
+            </div>
+        </section>
+
+        <!-- TENTANG SAYA SECTION -->
+        <section id="tentang" class="py-12 border-t border-gray-200 dark:border-zinc-800">
+            <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold mb-8">Tentang Saya</h2>
+            <div class="p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 space-y-4">
+                <p class="text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                    Halo! Website ini didedikasikan sebagai jurnal digital pribadi untuk mendokumentasikan perjalanan belajar dalam dunia pengembangan web serta analisis pasar finansial. 
+                </p>
+                <p class="text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                    Saya percaya bahwa proses merancang kode sederhana dan mengkaji strategi pasar dapat berjalan berdampingan untuk menghasilkan catatan yang bermanfaat.
+                </p>
+            </div>
+        </section>
+
+        <!-- KONTAK SECTION -->
+        <section id="kontak" class="py-12 border-t border-gray-200 dark:border-zinc-800">
+            <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold mb-8">Hubungi &amp; Terhubung</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a href="mailto:kenzlerofficial@gmail.com" class="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500 transition flex items-center justify-center space-x-2 text-sm font-semibold">
+                    <span>📧 Email</span>
+                </a>
+                <a href="https://t.me/083197738145" target="_blank" class="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500 transition flex items-center justify-center space-x-2 text-sm font-semibold">
+                    <span>💬 Telegram</span>
+                </a>
+                <a href="https://github.com/kenzlerofficial-ship-it" target="_blank" class="p-4 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500 transition flex items-center justify-center space-x-2 text-sm font-semibold">
+                    <span>💻 GitHub</span>
+                </a>
             </div>
         </section>
 
@@ -136,6 +166,54 @@
         </footer>
 
     </div>
+
+    <!-- POP-UP / HALAMAN BACA ARTIKEL 1 -->
+    <div id="modal-1" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
+        <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
+                <span class="text-xs text-brand-500 font-semibold px-2.5 py-1 bg-brand-500/10 rounded-full">Web Dev</span>
+                <button onclick="tutupArtikel('modal-1')" class="text-sm font-semibold px-4 py-2 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition cursor-pointer">← Kembali ke Beranda</button>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Membuat Tampilan Minimalis dengan Tailwind CSS dan Dark Mode</h2>
+            <div class="space-y-4 text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                <p>Tailwind CSS adalah kerangka kerja CSS berbasis utilitas yang sangat membantu developer untuk membangun desain antarmuka secara cepat tanpa harus menulis kode CSS yang panjang dari nol.</p>
+                <p>Dalam artikel ini, kita membahas bagaimana memanfaatkan kelas-kelas bawaan Tailwind untuk membuat elemen responsif, mulai dari tampilan layar kecil di ponsel hingga layar besar di desktop.</p>
+                <p>Fitur mode gelap (dark mode) juga menjadi poin penting agar kenyamanan mata pengguna terjaga saat membaca konten di malam hari. Cukup dengan menambahkan kelas pendukung dan sedikit skrip JavaScript sederhana, fitur sakelar tema dapat berfungsi dengan mulus.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex justify-end">
+                <button onclick="tutupArtikel('modal-1')" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition cursor-pointer">Tutup &amp; Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POP-UP / HALAMAN BACA ARTIKEL 2 -->
+    <div id="modal-2" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
+        <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
+                <span class="text-xs text-brand-500 font-semibold px-2.5 py-1 bg-brand-500/10 rounded-full">Trading</span>
+                <button onclick="tutupArtikel('modal-2')" class="text-sm font-semibold px-4 py-2 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition cursor-pointer">← Kembali ke Beranda</button>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Strategi Membaca Tren Pergerakan XAU/USD di Sesi London</h2>
+            <div class="space-y-4 text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                <p>Sesi perdagangan London sering kali menjadi salah satu waktu paling aktif dan volatil bagi instrumen XAU/USD (Emas terhadap Dolar Amerika Serikat). Pergerakan harga di awal sesi ini sering menentukan arah tren harian.</p>
+                <p>Manajemen risiko adalah kunci utama sebelum memutuskan untuk membuka posisi. Selalu tentukan batasan risiko (*stop loss*) yang jelas dan sesuaikan ukuran lot dengan ketahanan modal akun Anda.</p>
+                <p>Catatan harian ini berfungsi untuk mengevaluasi kembali keputusan analisis teknikal yang telah diambil, baik saat posisi mengalami keuntungan maupun kerugian.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex justify-end">
+                <button onclick="tutupArtikel('modal-2')" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition cursor-pointer">Tutup &amp; Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT INTERAKTIF POP-UP -->
+    <script>
+        function bukaArtikel(idModal) {
+            document.getElementById(idModal).classList.remove('hidden');
+        }
+        function tutupArtikel(idModal) {
+            document.getElementById(idModal).classList.add('hidden');
+        }
+    </script>
 
 </body>
 </html>
