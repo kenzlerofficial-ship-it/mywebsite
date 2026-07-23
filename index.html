@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev &amp; Trade</title>
     
+    <!-- Favicon Kustom (Mengganti ikon bola dunia default browser dengan grafik trading) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -28,8 +31,9 @@
         
         <!-- HEADER / NAVIGASI -->
         <header class="flex items-center justify-between pb-8 mb-8 border-b border-gray-200 dark:border-zinc-800">
-            <a href="#" class="font-extrabold text-lg tracking-tight flex items-center space-x-2">
-                <span class="w-3 h-3 rounded-full bg-brand-500"></span>
+            <a href="#" class="font-extrabold text-lg tracking-tight flex items-center space-x-2.5">
+                <!-- Logo Inisial Kustom (Bukan Bola Dunia) -->
+                <span class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xs font-bold border border-brand-500/20">DT</span>
                 <span>Dev &amp; Trade</span>
             </a>
             
@@ -38,6 +42,8 @@
                     <a href="#" class="hover:text-brand-500 transition">Beranda</a>
                     <a href="#kategori" class="hover:text-brand-500 transition">Topik</a>
                     <a href="#artikel" class="hover:text-brand-500 transition">Artikel</a>
+                    <a href="#pasar" class="hover:text-brand-500 transition">Pasar</a>
+                    <a href="#kalkulator" class="hover:text-brand-500 transition">Kalkulator</a>
                     <a href="#tentang" class="hover:text-brand-500 transition">Tentang</a>
                     <a href="#kontak" class="hover:text-brand-500 transition">Kontak</a>
                 </nav>
@@ -60,7 +66,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
                     <a href="#artikel" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition text-center shadow-lg shadow-brand-500/20">Mulai Eksplorasi</a>
-                    <a href="#kategori" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-zinc-700 font-semibold text-sm transition text-center">Jelajahi Topik</a>
+                    <a href="#kalkulator" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-gray-400 dark:hover:border-zinc-700 font-semibold text-sm transition text-center">Coba Kalkulator</a>
                 </div>
             </div>
             
@@ -96,7 +102,7 @@
             </div>
         </section>
 
-        <!-- ARTIKEL TERBARU SECTION (4 ARTIKEL) -->
+        <!-- ARTIKEL TERBARU SECTION -->
         <section id="artikel" class="py-12 border-t border-gray-200 dark:border-zinc-800">
             <div class="flex items-center justify-between mb-8">
                 <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold">Koleksi Artikel &amp; Catatan</h2>
@@ -154,6 +160,70 @@
                     </div>
                     <button onclick="bukaArtikel('modal-4')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
                 </article>
+            </div>
+        </section>
+
+        <!-- PASAR SECTION (BERITA & KALENDER EKONOMI AMAN) -->
+        <section id="pasar" class="py-12 border-t border-gray-200 dark:border-zinc-800 space-y-12">
+            
+            <!-- SUB-SECTION: TICKER HARGA PASAR -->
+            <div>
+                <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold mb-4">Ticker Harga Pasar</h2>
+                <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" style="height: 72px;">
+                    <iframe src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=id#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22Bitcoin%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22Ethereum%22%7D%2C%7B%22proName%22%3A%22OANDA%3AXAUUSD%22%2C%22title%22%3A%22XAU%2FUSD%20(Emas)%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22dark%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%2272%22%7D" width="100%" height="72" frameborder="0" style="width:100%;height:100%;"></iframe>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION: KALENDER EKONOMI (IFRAME STABIL) -->
+            <div>
+                <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold mb-4">Kalender Ekonomi Pasar</h2>
+                <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Pantau jadwal rilis berita ekonomi berdampak tinggi beserta data aktual, estimasi, dan sebelumnya.</p>
+                
+                <div class="rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" style="height: 550px;">
+                    <iframe src="https://s.tradingview.com/embed-widget/events/?locale=id#%7B%22colorTheme%22%3A%22dark%22%2C%22isTransparent%22%3Atrue%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22importanceFilter%22%3A%22-1%2C0%2C1%22%2C%22currencyFilter%22%3A%22USD%2CEUR%2FGBP%2CJPY%2CAUD%22%7D" width="100%" height="100%" frameborder="0" style="width:100%;height:100%;"></iframe>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FITUR BARU: KALKULATOR UKURAN LOT & MANAJEMEN RISIKO -->
+        <section id="kalkulator" class="py-12 border-t border-gray-200 dark:border-zinc-800">
+            <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold mb-4">Kalkulator Risiko &amp; Lot (XAU/USD)</h2>
+            <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Hitung ukuran lot aman sebelum membuka posisi berdasarkan toleransi risiko akun Anda.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-zinc-800">
+                <!-- Form Input -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 dark:text-zinc-400 mb-1">Total Modal Akun ($)</label>
+                        <input type="number" id="modalAkun" value="1000" class="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm focus:outline-none focus:border-brand-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 dark:text-zinc-400 mb-1">Risiko per Transaksi (%)</label>
+                        <input type="number" id="persenRisiko" value="1" step="0.1" class="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm focus:outline-none focus:border-brand-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-500 dark:text-zinc-400 mb-1">Jarak Stop Loss (Pips / Points)</label>
+                        <input type="number" id="jarakSL" value="30" class="w-full px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm focus:outline-none focus:border-brand-500 transition">
+                    </div>
+                    <button onclick="hitungLot()" class="w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition shadow-lg shadow-brand-500/20 cursor-pointer">Hitung Ukuran Lot</button>
+                </div>
+
+                <!-- Hasil Kalkulasi -->
+                <div class="flex flex-col justify-between p-6 rounded-xl bg-gray-50 dark:bg-zinc-950 border border-gray-200 dark:border-zinc-800 space-y-4">
+                    <h3 class="text-sm font-bold text-gray-400 dark:text-zinc-500 uppercase tracking-wider">Hasil Analisis Risiko</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600 dark:text-zinc-400">Nominal Risiko ($):</span>
+                            <span id="hasilDolar" class="font-bold text-base">$10.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-600 dark:text-zinc-400">Rekomendasi Ukuran Lot:</span>
+                            <span id="hasilLot" class="font-bold text-lg text-brand-500">0.03 Lot</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 dark:text-zinc-500 italic pt-2 border-t border-gray-200 dark:border-zinc-800">*Perhitungan standar menggunakan asumsi nilai pip emas ($1 per 0.01 lot per pip).</p>
+                </div>
             </div>
         </section>
 
@@ -269,13 +339,28 @@
         </div>
     </div>
 
-    <!-- SCRIPT INTERAKTIF -->
+    <!-- SCRIPT INTERAKTIF & KALKULATOR -->
     <script>
         function bukaArtikel(idModal) {
             document.getElementById(idModal).classList.remove('hidden');
         }
         function tutupArtikel(idModal) {
             document.getElementById(idModal).classList.add('hidden');
+        }
+
+        function hitungLot() {
+            const modal = parseFloat(document.getElementById('modalAkun').value) || 0;
+            const risikoPersen = parseFloat(document.getElementById('persenRisiko').value) || 0;
+            const slPips = parseFloat(document.getElementById('jarakSL').value) || 1;
+
+            // Hitung besaran risiko dalam dollar
+            const risikoDolar = modal * (risikoPersen / 100);
+            
+            // Rumus ukuran lot standar forex/emas (asumsi 1 pip = $1 per 0.01 lot)
+            const ukuranLot = risikoDolar / (slPips * 1);
+
+            document.getElementById('hasilDolar').innerText = '$' + risikoDolar.toFixed(2);
+            document.getElementById('hasilLot').innerText = ukuranLot.toFixed(2) + ' Lot';
         }
     </script>
 
