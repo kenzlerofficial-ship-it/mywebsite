@@ -96,10 +96,10 @@
             </div>
         </section>
 
-        <!-- ARTIKEL TERBARU SECTION -->
+        <!-- ARTIKEL TERBARU SECTION (4 ARTIKEL) -->
         <section id="artikel" class="py-12 border-t border-gray-200 dark:border-zinc-800">
             <div class="flex items-center justify-between mb-8">
-                <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold">Artikel Terbaru</h2>
+                <h2 class="text-xs uppercase tracking-widest text-gray-400 dark:text-zinc-500 font-bold">Koleksi Artikel &amp; Catatan</h2>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -127,6 +127,32 @@
                         <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Catatan evaluasi dan manajemen risiko harian dalam menghadapi volatilitas tinggi pada market emas.</p>
                     </div>
                     <button onclick="bukaArtikel('modal-2')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
+                </article>
+
+                <!-- Artikel 3 -->
+                <article class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gray-400 dark:text-zinc-500 mb-3">
+                            <span>18 Juli 2026</span>
+                            <span class="px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-500 font-medium">Web Dev</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer" onclick="bukaArtikel('modal-3')">Memanfaatkan GitHub Pages untuk Hosting Website Gratis</h3>
+                        <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Panduan cepat mempublikasikan karya web tanpa biaya server menggunakan repositori GitHub.</p>
+                    </div>
+                    <button onclick="bukaArtikel('modal-3')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
+                </article>
+
+                <!-- Artikel 4 -->
+                <article class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 hover:border-brand-500/50 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gray-400 dark:text-zinc-500 mb-3">
+                            <span>15 Juli 2026</span>
+                            <span class="px-2 py-0.5 rounded-md bg-brand-500/10 text-brand-500 font-medium">Trading</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 hover:text-brand-500 transition cursor-pointer" onclick="bukaArtikel('modal-4')">Pentingnya Psikologi Trading dan Disiplin Risiko</h3>
+                        <p class="text-sm text-gray-600 dark:text-zinc-400 mb-6">Mengapa emosi adalah musuh terbesar seorang trader dan cara mengendalikannya.</p>
+                    </div>
+                    <button onclick="bukaArtikel('modal-4')" class="inline-flex items-center text-sm font-semibold text-brand-500 hover:space-x-2 transition text-left cursor-pointer">Baca Artikel &rarr;</button>
                 </article>
             </div>
         </section>
@@ -167,7 +193,7 @@
 
     </div>
 
-    <!-- POP-UP / HALAMAN BACA ARTIKEL 1 -->
+    <!-- MODAL ARTIKEL 1 -->
     <div id="modal-1" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
         <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
             <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
@@ -186,7 +212,7 @@
         </div>
     </div>
 
-    <!-- POP-UP / HALAMAN BACA ARTIKEL 2 -->
+    <!-- MODAL ARTIKEL 2 -->
     <div id="modal-2" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
         <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
             <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
@@ -205,7 +231,45 @@
         </div>
     </div>
 
-    <!-- SCRIPT INTERAKTIF POP-UP -->
+    <!-- MODAL ARTIKEL 3 -->
+    <div id="modal-3" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
+        <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
+                <span class="text-xs text-brand-500 font-semibold px-2.5 py-1 bg-brand-500/10 rounded-full">Web Dev</span>
+                <button onclick="tutupArtikel('modal-3')" class="text-sm font-semibold px-4 py-2 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition cursor-pointer">← Kembali ke Beranda</button>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Memanfaatkan GitHub Pages untuk Hosting Website Gratis</h2>
+            <div class="space-y-4 text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                <p>GitHub Pages adalah fitur luar biasa yang disediakan oleh GitHub bagi para pengembang untuk meng-host situs web statis langsung dari repositori mereka secara cuma-cuma.</p>
+                <p>Prosesnya sangat mudah, Anda cukup mengunggah file HTML ke branch utama, mengaktifkan pengaturannya di menu Pages, dan website Anda langsung bisa diakses secara global.</p>
+                <p>Layanan ini sangat cocok bagi pemula yang ingin membangun portofolio, dokumentasi proyek, atau blog pribadi tanpa harus pusing memikirkan biaya sewa server bulanan.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex justify-end">
+                <button onclick="tutupArtikel('modal-3')" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition cursor-pointer">Tutup &amp; Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ARTIKEL 4 -->
+    <div id="modal-4" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center px-4">
+        <div class="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 max-w-2xl w-full p-8 rounded-3xl max-h-[85vh] overflow-y-auto space-y-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 pb-4">
+                <span class="text-xs text-brand-500 font-semibold px-2.5 py-1 bg-brand-500/10 rounded-full">Trading</span>
+                <button onclick="tutupArtikel('modal-4')" class="text-sm font-semibold px-4 py-2 rounded-xl bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 transition cursor-pointer">← Kembali ke Beranda</button>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold">Pentingnya Psikologi Trading dan Disiplin Risiko</h2>
+            <div class="space-y-4 text-sm text-gray-600 dark:text-zinc-300 leading-relaxed">
+                <p>Banyak trader pemula mengira bahwa kunci sukses di pasar finansial sepenuhnya terletak pada indikator teknikal yang rumit. Padahal, faktor psikologi dan emosi memegang porsi yang sangat besar.</p>
+                <p>Rasa serakah saat profit atau panik saat mengalami kerugian (*loss*) sering kali merusak rencana perdagangan yang sudah disusun rapi sebelumnya.</p>
+                <p>Disiplin dalam menerapkan manajemen risiko yang ketat adalah satu-satunya perisai agar akun trading bisa bertahan dalam jangka panjang di tengah ketidakpastian pasar.</p>
+            </div>
+            <div class="pt-4 border-t border-gray-200 dark:border-zinc-800 flex justify-end">
+                <button onclick="tutupArtikel('modal-4')" class="px-6 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm transition cursor-pointer">Tutup &amp; Kembali</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT INTERAKTIF -->
     <script>
         function bukaArtikel(idModal) {
             document.getElementById(idModal).classList.remove('hidden');
